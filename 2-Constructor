@@ -1,0 +1,25 @@
+class Pin{
+ public:
+ byte pinNum;
+ boolean Init;
+ Pin(byte p, boolean I){
+  pinNum = p;
+  Init = I;
+ }
+ void PinS(){
+  pinMode(pinNum , 1);
+  digitalWrite(pinNum, Init);
+ }
+};
+
+Pin p1(11,0);
+Pin p2(12,1);
+void setup(){
+
+  p1.PinS();
+    p2.PinS();
+
+}
+void loop(){
+  
+}
